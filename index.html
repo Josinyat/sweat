@@ -1,0 +1,1990 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Jobbens Construction and Supplies Limited offers professional tiling, wall painting and ceiling painting services in Nairobi, Kenya.">
+
+    <title>Jobbens Construction and Supplies Limited | Quality Construction</title>
+
+    <style>
+
+        /* =========================
+           GLOBAL SETTINGS
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --dark: #252525;
+            --dark2: #333333;
+            --orange: #f47721;
+            --cream: #f5f1e9;
+            --white: #ffffff;
+            --gray: #777777;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: var(--dark);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        /* LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--orange);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 23px;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .logo-text h2 {
+            font-size: 17px;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            font-size: 10px;
+            color: var(--orange);
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--orange);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 27px;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .btn {
+            display: inline-block;
+            padding: 13px 27px;
+            background: var(--orange);
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #d85e0d;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--dark);
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    rgba(20,20,20,0.78),
+                    rgba(20,20,20,0.78)
+                ),
+                url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=85");
+
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 750px;
+            animation: fadeUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--orange);
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #eeeeee;
+        }
+
+        .hero-label {
+            display: inline-block;
+            background: var(--orange);
+            padding: 7px 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+
+        /* =========================
+           SECTION GENERAL
+        ========================= */
+
+        section {
+            padding: 85px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 span {
+            color: var(--orange);
+        }
+
+        .section-heading p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .line {
+            width: 65px;
+            height: 4px;
+            background: var(--orange);
+            margin: 15px auto;
+        }
+
+
+        /* =========================
+           ABOUT SECTION
+        ========================= */
+
+        .about {
+            background: var(--cream);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .about-text h2 {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            margin: 20px 0;
+            list-style: none;
+        }
+
+        .about-list li {
+            margin-bottom: 10px;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: var(--orange);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .service-info {
+            padding: 25px;
+        }
+
+        .service-info h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .service-info p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .service-info a {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .service-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .service-gallery img {
+            height: 90px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .service-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+
+        /* =========================
+           PROJECT GALLERY
+        ========================= */
+
+        .projects {
+            background: var(--cream);
+        }
+
+        .project-category {
+            margin-bottom: 45px;
+        }
+
+        .project-category h3 {
+            font-size: 23px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--orange);
+            padding-left: 15px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 250px;
+            background: #ddd;
+        }
+
+        .project-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.12);
+        }
+
+        .project-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            color: white;
+            background: linear-gradient(transparent, rgba(0,0,0,0.85));
+            font-weight: bold;
+        }
+
+
+        /* =========================
+           CONSULTATION FEE
+        ========================= */
+
+        .fee-section {
+            padding: 55px 0;
+            background: var(--dark);
+        }
+
+        .fee-box {
+            border: 2px solid var(--orange);
+            border-radius: 10px;
+            padding: 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: white;
+        }
+
+        .fee-box h2 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .fee-box h2 span {
+            color: var(--orange);
+        }
+
+        .fee-box p {
+            color: #cccccc;
+        }
+
+        .fee-price {
+            font-size: 45px;
+            color: var(--orange);
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+
+        /* =========================
+           WHY CHOOSE US
+        ========================= */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            text-align: center;
+            padding: 30px 15px;
+            background: var(--cream);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .why-card:hover {
+            background: var(--dark);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .why-card .icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            font-size: 14px;
+            color: var(--gray);
+            margin-top: 10px;
+        }
+
+        .why-card:hover p {
+            color: #ddd;
+        }
+
+
+        /* =========================
+           INQUIRY FORM
+        ========================= */
+
+        .inquiry {
+            background: var(--cream);
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 15px;
+            font-family: inherit;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--orange);
+        }
+
+        .form-group textarea {
+            height: 140px;
+            resize: vertical;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        #formMessage {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+            background: #e3f5e7;
+            color: #206b31;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        .contact {
+            background: var(--dark);
+            color: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .contact-item span {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .contact-item a {
+            color: white;
+        }
+
+        .contact-item a:hover {
+            color: var(--orange);
+        }
+
+        .contact-form-box {
+            background: #383838;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .contact-form-box h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-form-box input,
+        .contact-form-box textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .contact-form-box textarea {
+            height: 110px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #171717;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer strong {
+            color: var(--orange);
+        }
+
+
+        /* =========================
+           WHATSAPP BUTTON
+        ========================= */
+
+        .whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media(max-width: 900px) {
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media(max-width: 768px) {
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: var(--dark);
+                display: none;
+                padding: 20px;
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid,
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .fee-box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                padding: 25px;
+            }
+        }
+
+        @media(max-width: 480px) {
+
+            .logo-text h2 {
+                font-size: 13px;
+            }
+
+            .logo-text span {
+                font-size: 8px;
+            }
+
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 19px;
+            }
+
+            .hero h1 {
+                font-size: 31px;
+            }
+
+            .section-heading h2 {
+                font-size: 27px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero .btn {
+                margin-bottom: 10px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#home" class="logo">
+
+            <div class="logo-icon">
+                J
+            </div>
+
+            <div class="logo-text">
+
+                <h2>JOBBENS</h2>
+
+                <span>CONSTRUCTION & SUPPLIES LTD</span>
+
+            </div>
+
+        </a>
+
+
+        <div class="menu-toggle" id="menuToggle">
+            ☰
+        </div>
+
+
+        <nav id="navigation">
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About Us</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#projects">Projects</a></li>
+
+                <li><a href="#inquiry">Inquiry</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                QUALITY WORKMANSHIP • PROFESSIONAL SERVICE
+            </span>
+
+            <h1>
+                Building Beautiful Spaces,
+                <span>Creating Lasting Value.</span>
+            </h1>
+
+            <p>
+                Welcome to Jobbens Construction and Supplies Limited.
+                We provide professional tiling, wall painting and
+                ceiling painting solutions designed to transform
+                your residential and commercial spaces.
+            </p>
+
+            <a href="#inquiry" class="btn">
+                Request a Quote
+            </a>
+
+            <a href="#services" class="btn btn-outline">
+                Explore Services
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT SECTION
+========================= -->
+
+<section class="about" id="about">
+
+    <div class="container about-content">
+
+        <div class="about-image reveal">
+
+            <img
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+                alt="Beautiful completed modern residential interior"
+            >
+
+        </div>
+
+
+        <div class="about-text reveal">
+
+            <h2>
+                About <span style="color:#f47721">Jobbens Construction</span>
+            </h2>
+
+            <p>
+                Jobbens Construction and Supplies Limited is committed
+                to delivering quality construction finishing services
+                that improve the appearance, functionality and value
+                of residential and commercial properties.
+            </p>
+
+            <p>
+                Our focus is on professional workmanship, attention
+                to detail, customer satisfaction and reliable service.
+            </p>
+
+            <ul class="about-list">
+
+                <li>Professional tiling services</li>
+
+                <li>Interior and exterior wall painting</li>
+
+                <li>Ceiling preparation and painting</li>
+
+                <li>Quality finishing and attention to detail</li>
+
+                <li>Residential and commercial projects</li>
+
+            </ul>
+
+            <a href="#contact" class="btn">
+                Contact Our Team
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES SECTION
+========================= -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Our <span>Services</span></h2>
+
+            <div class="line"></div>
+
+            <p>
+                We provide quality construction finishing services
+                to transform your spaces into beautiful environments.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <!-- TILING -->
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85"
+                    alt="Professional floor tiling"
+                >
+
+                <div class="service-info">
+
+                    <h3>Professional Tiling</h3>
+
+                    <p>
+                        We offer professional floor and wall tiling
+                        services using quality materials and precise
+                        installation techniques. From kitchens and
+                        bathrooms to living rooms and commercial spaces,
+                        we deliver beautiful and durable finishes.
+                    </p>
+
+                    <a href="#inquiry">
+                        Request Tiling Services →
+                    </a>
+
+                    <div class="service-gallery">
+
+                        <img src="https://via.placeholder.com/400x300?text=Tiling+Job+1" alt="Tiling Job 1">
+
+                        <img src="https://via.placeholder.com/400x300?text=Tiling+Job+2" alt="Tiling Job 2">
+
+                        <img src="https://via.placeholder.com/400x300?text=Tiling+Job+3" alt="Tiling Job 3">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WALL PAINTING -->
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=800&q=85"
+                    alt="Professional wall painting"
+                >
+
+                <div class="service-info">
+
+                    <h3>Wall Painting</h3>
+
+                    <p>
+                        Transform your walls with professional painting
+                        services. We handle surface preparation,
+                        filling, sanding, priming and painting to
+                        achieve smooth, attractive and lasting finishes.
+                    </p>
+
+                    <a href="#inquiry">
+                        Request Wall Painting →
+                    </a>
+
+                    <div class="service-gallery">
+
+                        <img src="https://via.placeholder.com/400x300?text=Wall+Painting+1" alt="Wall Painting Job 1">
+
+                        <img src="https://via.placeholder.com/400x300?text=Wall+Painting+2" alt="Wall Painting Job 2">
+
+                        <img src="https://via.placeholder.com/400x300?text=Wall+Painting+3" alt="Wall Painting Job 3">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CEILING PAINTING -->
+
+            <div class="service-card reveal">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85"
+                    alt="Beautiful interior ceiling finish"
+                >
+
+                <div class="service-info">
+
+                    <h3>Ceiling Painting</h3>
+
+                    <p>
+                        Give your interior spaces a clean and elegant
+                        appearance with our ceiling painting services.
+                        We provide ceiling preparation, crack repairs,
+                        priming and professional painting for smooth
+                        and consistent results.
+                    </p>
+
+                    <a href="#inquiry">
+                        Request Ceiling Painting →
+                    </a>
+
+                    <div class="service-gallery">
+
+                        <img src="https://via.placeholder.com/400x300?text=Ceiling+Painting+1" alt="Ceiling Painting Job 1">
+
+                        <img src="https://via.placeholder.com/400x300?text=Ceiling+Painting+2" alt="Ceiling Painting Job 2">
+
+                        <img src="https://via.placeholder.com/400x300?text=Ceiling+Painting+3" alt="Ceiling Painting Job 3">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     COMPLETED PROJECTS
+========================= -->
+
+<section class="projects" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Our Completed <span>Projects</span></h2>
+
+            <div class="line"></div>
+
+            <p>
+                Explore examples of the finishing work we undertake
+                across our three main service categories.
+            </p>
+
+        </div>
+
+
+
+        <!-- TILING PROJECTS -->
+
+        <div class="project-category reveal">
+
+            <h3>Tiling Projects</h3>
+
+            <div class="project-grid">
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Completed+Floor+Tiling"
+                        alt="Completed residential floor tiling project"
+                    >
+
+                    <div class="project-caption">
+                        Residential Floor Tiling
+                    </div>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Bathroom+Tiling"
+                        alt="Completed bathroom wall and floor tiling"
+                    >
+
+                    <div class="project-caption">
+                        Bathroom Tiling
+                    </div>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Kitchen+Tiling"
+                        alt="Completed modern kitchen tiling"
+                    >
+
+                    <div class="project-caption">
+                        Kitchen Tiling
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WALL PAINTING PROJECTS -->
+
+        <div class="project-category reveal">
+
+            <h3>Wall Painting Projects</h3>
+
+            <div class="project-grid">
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Interior+Wall+Painting"
+                        alt="Completed interior wall painting project"
+                    >
+
+                    <div class="project-caption">
+                        Interior Wall Painting
+                    </div>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Exterior+Wall+Painting"
+                        alt="Completed exterior wall painting"
+                    >
+
+                    <div class="project-caption">
+                        Exterior Wall Painting
+                    </div>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Living+Room+Painting"
+                        alt="Completed living room wall painting"
+                    >
+
+                    <div class="project-caption">
+                        Living Room Painting
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- CEILING PAINTING PROJECTS -->
+
+        <div class="project-category reveal">
+
+            <h3>Ceiling Painting Projects</h3>
+
+            <div class="project-grid">
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Bedroom+Ceiling"
+                        alt="Completed bedroom ceiling painting"
+                    >
+
+                    <div class="project-caption">
+                        Bedroom Ceiling Painting
+                    </div>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Living+Room+Ceiling"
+                        alt="Completed living room ceiling painting"
+                    >
+
+                    <div class="project-caption">
+                        Living Room Ceiling
+                    </div>
+
+                </div>
+
+
+                <div class="project-item">
+
+                    <img
+                        src="https://via.placeholder.com/600x400?text=Commercial+Ceiling"
+                        alt="Completed commercial ceiling painting"
+                    >
+
+                    <div class="project-caption">
+                        Commercial Ceiling Painting
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONSULTATION FEE
+========================= -->
+
+<section class="fee-section">
+
+    <div class="container">
+
+        <div class="fee-box">
+
+            <div>
+
+                <h2>
+                    Professional Consultation & Site Visit
+                </h2>
+
+                <p>
+                    Our consultation and site visit fee is deducted
+                    from your final project invoice when you proceed
+                    with our services.
+                </p>
+
+            </div>
+
+            <div class="fee-price">
+                $25
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Why Choose <span>Jobbens?</span></h2>
+
+            <div class="line"></div>
+
+            <p>
+                We are committed to quality, professionalism and
+                customer satisfaction.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card reveal">
+
+                <div class="icon">🏗️</div>
+
+                <h3>Quality Work</h3>
+
+                <p>
+                    Professional workmanship and attention to detail.
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal">
+
+                <div class="icon">⏱️</div>
+
+                <h3>Timely Delivery</h3>
+
+                <p>
+                    We value your time and project schedules.
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal">
+
+                <div class="icon">🤝</div>
+
+                <h3>Customer Focus</h3>
+
+                <p>
+                    We listen to your needs and project expectations.
+                </p>
+
+            </div>
+
+
+            <div class="why-card reveal">
+
+                <div class="icon">⭐</div>
+
+                <h3>Professionalism</h3>
+
+                <p>
+                    Reliable service and commitment to excellent finishes.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     INQUIRY FORM
+========================= -->
+
+<section class="inquiry" id="inquiry">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Request a <span>Quotation</span></h2>
+
+            <div class="line"></div>
+
+            <p>
+                Tell us about your project. Our team will be happy
+                to discuss your requirements.
+            </p>
+
+        </div>
+
+
+        <div class="form-container">
+
+            <form id="inquiryForm">
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="name">Full Name *</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">Email Address *</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phone">Phone Number *</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="service">Service Required *</label>
+
+                        <select id="service" required>
+
+                            <option value="">Select a service</option>
+
+                            <option value="Tiling">Tiling</option>
+
+                            <option value="Wall Painting">Wall Painting</option>
+
+                            <option value="Ceiling Painting">Ceiling Painting</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="message">Project Description *</label>
+
+                        <textarea
+                            id="message"
+                            placeholder="Describe your project, location and requirements..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+                <button type="submit" class="btn">
+                    Submit Inquiry
+                </button>
+
+
+                <div id="formMessage" role="status" aria-live="polite"></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT SECTION
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <div class="contact-info">
+
+                <h2>
+                    Get In <span style="color:#f47721">Touch</span>
+                </h2>
+
+                <p>
+                    Are you planning a construction finishing project?
+                    Contact Jobbens Construction and Supplies Limited
+                    today for professional assistance.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <span>📞 Phone:</span><br>
+
+                    <a href="tel:+254723383933">
+                        +254 723 383 933
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>✉ Email:</span><br>
+
+                    <a href="mailto:jobbens06@gmail.com">
+                        jobbens06@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>📍 Location:</span><br>
+
+                    Super Center, Nairobi, Kenya
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span>🏢 Company:</span><br>
+
+                    Jobbens Construction and Supplies Limited
+
+                </div>
+
+
+                <a
+                    href="https://wa.me/254723383933"
+                    class="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Chat With Us on WhatsApp
+                </a>
+
+            </div>
+
+
+
+            <!-- QUICK EMAIL FORM -->
+
+            <div class="contact-form-box">
+
+                <h3>Send Us an Inquiry</h3>
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        id="contactName"
+                        placeholder="Your Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="contactEmail"
+                        placeholder="Your Email"
+                        required
+                    >
+
+                    <textarea
+                        id="contactMessage"
+                        placeholder="How can we help you?"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn">
+                        Send Inquiry
+                    </button>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © <span id="year"></span>
+        <strong>JOBBENS CONSTRUCTION AND SUPPLIES LIMITED</strong>.
+        All Rights Reserved.
+    </p>
+
+    <p>
+        Quality Workmanship. Professional Service. Lasting Value.
+    </p>
+
+</footer>
+
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
+
+<a
+    href="https://wa.me/254723383933"
+    class="whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Jobbens on WhatsApp"
+>
+    ☎
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+    // MOBILE NAVIGATION
+
+    const menuToggle = document.getElementById("menuToggle");
+
+    const navigation = document.getElementById("navigation");
+
+
+    menuToggle.addEventListener("click", function() {
+
+        navigation.classList.toggle("active");
+
+        menuToggle.textContent =
+            navigation.classList.contains("active") ? "✕" : "☰";
+
+    });
+
+
+    // CLOSE MENU AFTER CLICKING A LINK
+
+    document.querySelectorAll("#navigation a").forEach(link => {
+
+        link.addEventListener("click", function() {
+
+            navigation.classList.remove("active");
+
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
+
+
+
+    // AUTOMATIC COPYRIGHT YEAR
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+
+    // SCROLL ANIMATIONS
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+
+    function revealOnScroll() {
+
+        revealElements.forEach(element => {
+
+            const windowHeight = window.innerHeight;
+
+            const elementTop =
+                element.getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 80) {
+
+                element.classList.add("active");
+
+            }
+
+        });
+
+    }
+
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    revealOnScroll();
+
+
+
+    // MAIN INQUIRY FORM
+
+    const inquiryForm =
+        document.getElementById("inquiryForm");
+
+
+    inquiryForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const service =
+            document.getElementById("service").value;
+
+        const message =
+            document.getElementById("message").value.trim();
+
+
+        const confirmation =
+            document.getElementById("formMessage");
+
+
+        confirmation.style.display = "block";
+
+        confirmation.innerHTML =
+            "<strong>Thank you, " + escapeHTML(name) + "!</strong><br>" +
+            "Your inquiry for " + escapeHTML(service) +
+            " has been prepared. Please use the contact section " +
+            "or WhatsApp button to send it to our team.";
+
+
+        // Prepare an email for the visitor to send.
+
+        const subject =
+            encodeURIComponent("New " + service + " Inquiry");
+
+        const body =
+            encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\nPhone: " + phone +
+                "\nService: " + service +
+                "\nProject Details: " + message
+            );
+
+
+        const mailLink =
+            "mailto:jobbens06@gmail.com?subject=" +
+            subject + "&body=" + body;
+
+
+        // Display feedback without clearing the form.
+
+        const emailButton = document.createElement("a");
+
+        emailButton.href = mailLink;
+
+        emailButton.textContent = "Open Email to Send Inquiry";
+
+        emailButton.className = "btn";
+
+        emailButton.style.marginTop = "12px";
+
+        emailButton.style.color = "white";
+
+        confirmation.appendChild(document.createElement("br"));
+
+        confirmation.appendChild(emailButton);
+
+    });
+
+
+
+    // PREVENT HTML INJECTION IN CONFIRMATION MESSAGE
+
+    function escapeHTML(value) {
+
+        return value.replace(/[&<>"']/g, function(character) {
+
+            const entities = {
+
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+
+            };
+
+            return entities[character];
+
+        });
+
+    }
+
+
+
+    // QUICK CONTACT EMAIL FORM
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+
+    contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById("contactName").value.trim();
+
+        const email =
+            document.getElementById("contactEmail").value.trim();
+
+        const message =
+            document.getElementById("contactMessage").value.trim();
+
+
+        const subject =
+            encodeURIComponent("Website Inquiry from " + name);
+
+
+        const body =
+            encodeURIComponent(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message
+            );
+
+
+        const mailto =
+            "mailto:jobbens06@gmail.com?subject=" +
+            subject + "&body=" + body;
+
+
+        window.location.href = mailto;
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>
